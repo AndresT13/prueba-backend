@@ -1,24 +1,21 @@
 package com.nttdata.backend.app.domain.dto;
 
+import lombok.*;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
+@ToString
 public class UserDTO {
-
-    private String primerNombre;
-
-    private String segundoNombre;
-
-    private String primerApellido;
-
-    private String segundoApellido;
-
-    private String telefono;
-    private String direccion;
-    private String numeroCedula;
+     private String tipoDocumento;
+     private String numeroDocumento;
+     private String primerNombre;
+     private String segundoNombre;
+     private String primerApellido;
+     private String segundoApellido;
+     private String telefono;
+     private String direccion;
+     private String numeroCedula;
 }

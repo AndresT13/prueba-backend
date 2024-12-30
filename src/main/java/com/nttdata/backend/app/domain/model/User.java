@@ -9,6 +9,8 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
+@Builder
 @Table(name="users")
 public class User {
 
@@ -16,6 +18,7 @@ public class User {
     @GeneratedValue( strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String tipoDocumento;
     private String primerNombre;
 
     private String segundoNombre;

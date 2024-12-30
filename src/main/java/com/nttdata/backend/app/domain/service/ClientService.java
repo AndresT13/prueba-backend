@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 import java.util.HashMap;
 import java.util.Map;
 
-
 @Service
 public class ClientService {
 
@@ -18,8 +17,9 @@ public class ClientService {
     private static final Map<String, UserDTO> CLIENTS = new HashMap<>();
 
     static {
-        CLIENTS.put("C23445322", new UserDTO("Juan", "Carlos", "Perez", "Gomez", "1234567890", "Calle 123", "23445322"));
-        CLIENTS.put("P987654321", new UserDTO("Maria", "Luisa", "Rodriguez", "Martinez", "0987654321", "Carrera 456", "987654321"));
+        // Asegúrate de que todos los campos están inicializados correctamente
+        CLIENTS.put("C23445322", new UserDTO("C", "23445322", "Juan", "Carlos", "Perez", "Gomez", "1234567890", "Calle 123", "23445322"));
+        CLIENTS.put("P987654321", new UserDTO("P", "987654321", "Maria", "Luisa", "Rodriguez", "Martinez", "0987654321", "Carrera 456", "987654321"));
     }
 
     public UserDTO getClient(String type, String number) {
@@ -29,8 +29,6 @@ public class ClientService {
         }
         String key = type + number;
         logger.info("Searching for client with key: {}", key);
-        System.out.println("\n" +
-                "Searching for client with password: " + key); // Añadir logging para depuración
         UserDTO client = CLIENTS.get(key);
         if (client == null) {
             logger.error("Client not found with key: {}", key);

@@ -1,4 +1,4 @@
-
+package com.nttdata.backend.app;
 
 import com.nttdata.backend.app.domain.dto.UserDTO;
 import com.nttdata.backend.app.domain.service.ClientService;
@@ -12,7 +12,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(MockitoExtension.class)
- class ClientServiceTest {
+class ClientServiceTest {
 
     private ClientService clientService;
 
